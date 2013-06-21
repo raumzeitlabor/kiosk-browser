@@ -3,6 +3,8 @@ It's intended use is to display a single web resource non-interactively,
 while being highly portable, especially to the arm11 architecture (used for the Raspberry Pi), and supporting Javascript and HTML5 Websockets for dynamic content updates.
 [Peter Schultz](https://github.com/pschultz/kiosk-browser "kiosk-browser on github") wrote the original version. See the changes under changelog.
 
+* [German blog post about a use case with my raspberry pi on repat.de](http://repat.de/2013/03/raspberry-pi-als-kiosk-mit-resourcenschonendem-browser-und-vesa-mount/ "kiosk-browser on repat.de")
+
 ## Compiling
     apt-get install libwebkit-dev
     # OR: yum install webkitgtk-devel
@@ -18,19 +20,19 @@ This program was designed to be started via inittab on boot like this:
 ## Usage
     ./browser
 
-This will launch the browser in fullscreen mode and load the resource from`default_url` hardwired in the source.
-`default_url` can be anything that WebKit supports, including `file://`-URLs for local webpages and documents.
+This will launch the browser in fullscreen mode and load the resource from`DEFAULT_URL` hardwired in the source.
+`DEFAULT_URL` can be anything that WebKit supports, including `file://`-URLs for local webpages and documents.
 
-The following keybindings exist:
+The following keybinding exists:
   - `F5` for reloading the current page
-These actions are also implemented as signal handlers:
+It's also implemented as a signal handler:
   - `HUP` for reload
 
 ## Changelog
 * hardwired position(`int HEIGHT` and `int WIDTH`)
 * hardwired URL (`gchar* DEFAULT_URL`), no commandline argument
 * hardwired position (`GTK_WIN_POS_CENTER_ALWAYS`)
-* no toogle fullscreen with F11, thus removed unmaximize() and USR1
+* no toggle fullscreen with F11, thus removed unmaximize() and USR1
 * deleted Makefile, only one command(see above)
 
 ## Contact
