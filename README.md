@@ -29,7 +29,7 @@ It's also implemented as a signal handler:
   - `HUP` for reload
 
 ## Changelog
-* hardwired position(`int HEIGHT` and `int WIDTH`)
+* hardwired size(`int HEIGHT` and `int WIDTH`)
 * hardwired URL (`gchar* DEFAULT_URL`), no commandline argument
 * hardwired position (`GTK_WIN_POS_CENTER_ALWAYS`)
 * no toggle fullscreen with F11, thus removed unmaximize() and USR1
