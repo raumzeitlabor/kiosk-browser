@@ -17,7 +17,7 @@ static WebKitWebView* web_view;
 static GtkWidget *window;
 
 // hardwired default page
-gchar* DEFAULT_URL = "http:\/\/repat.de;
+gchar* DEFAULT_URL = "http:\/\/repat.de";
 // hardẃired size
 int HEIGHT = 1600;
 int WIDTH = 900;
