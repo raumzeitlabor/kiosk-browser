@@ -26,27 +26,28 @@ Die Infoscreen-URL und die Fenstergröße ist in der sourcefile hardcoded. Also 
     # Browser mit X-Session laden
     vi ~/.xsession
 
-        #!/bin/bash \n
-        /usr/bin/startx -e /usr/bin/browser tty1 </dev/tty1 >/dev/tty1"
 
-    
+        #!/bin/bash
+
+        xset s noblank     # don't blank the video device
+        xset s off         # don't activate screensaver
+        xset -dpms         # disable DPMS (Energy Star) features.
+
+        while ! getent hosts infra.rzl ; do
+            sleep 1
+        done
+
+        /usr/bin/browser
+
+
     # config nodm
     sudoedit /etc/defaults/nodm
 
         NODM_ENABLED=true
         NODM_USER=pi
+        NODM_X_OPTIONS='-nolisten tcp -s 0 dpms'
 
     
-    # kein screensaver
-    
-    vi ~/.xinitrc
-
-        #!/bin/bash
-        xset s off         # don't activate screensaver
-        xset -dpms         # disable DPMS (Energy Star) features.
-        xset s noblank     # don't blank the video device
-
-
     sudo reboot
 
 ## Credits
