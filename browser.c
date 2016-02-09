@@ -17,10 +17,10 @@ static WebKitWebView* web_view;
 static GtkWidget *window;
 
 // hardwired default page
-gchar* DEFAULT_URL = "http:\/\/repat.de";
+gchar* DEFAULT_URL = "http:infra.rzl/infoscreen";
 // hardẃired size
-int HEIGHT = 1600;
-int WIDTH = 900;
+int HEIGHT = 1920;
+int WIDTH = 1080;
 
 int main(int argc, char** argv) {
   gtk_init(&argc, &argv);
