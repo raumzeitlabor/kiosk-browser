@@ -49,6 +49,9 @@ Die Infoscreen-URL und die Fenstergröße ist in der sourcefile hardcoded. Also 
 
     sudo reboot
 
+## Credits
+Code von @repat und @pschultz
+Flatter-Button für repat unten an der README.md
 
 -------
 
