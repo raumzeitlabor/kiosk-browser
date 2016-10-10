@@ -33,7 +33,7 @@ Die Infoscreen-URL und die Fenstergröße ist in der sourcefile hardcoded. Also 
         xset s off         # don't activate screensaver
         xset -dpms         # disable DPMS (Energy Star) features.
 
-        while ! getent hosts infra.rzl ; do
+        while ! getent hosts cashdesk.rzl ; do
             sleep 1
         done
 
