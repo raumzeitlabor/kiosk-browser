@@ -17,7 +17,7 @@ static WebKitWebView* web_view;
 static GtkWidget *window;
 
 // hardwired default page
-gchar* DEFAULT_URL = "http:infra.rzl/infoscreen";
+gchar* DEFAULT_URL = "http://cashdesk.rzl:3030/rzl";
 // hardẃired size
 int HEIGHT = 1920;
 int WIDTH = 1200;
