@@ -6,6 +6,16 @@ Modifiziertes Repo um einen RPI mit vanilla raspbian als RZL-Infoscreen zu nutze
 ## how?
 Die Infoscreen-URL und die Fenstergröße ist in der sourcefile hardcoded. Also vorher ggf. ändern, inbesondere wenn ein anderes Display verwendet wird, dann neu kompilieren.
 
+    # UPGRADE 03/2017:
+    # mittlerweile läuft der infoscreen pi aus Gründen(tm) mit archlinuxarm als distribution. 
+    # Das heißt die entsprechenden commands müssen angepasst werden.
+    # Im wesentlichen sollte das so funktionieren:
+
+    pacman -Syyu
+    pacman -S base-devel webkitgtk2
+    
+    # un dann weiter wie bisher.
+
     # remove lightdm
     sudo apt-get update
     sudo apt-get -y purge lightdm
